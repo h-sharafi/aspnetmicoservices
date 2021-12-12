@@ -1,9 +1,10 @@
-using Ordering.Domain.Common;
+using MediatR;
 
-namespace Ordering.Domain.Entities
+namespace Ordering.Application.Feactures.Orders.Commands.UpdateOrder
 {
-    public class Order : EntityBase
+    public class UpdateOrderCommand : IRequest
     {
+        public int Id { get; set; }
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }
 
