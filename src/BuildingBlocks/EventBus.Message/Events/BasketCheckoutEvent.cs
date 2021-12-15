@@ -1,9 +1,11 @@
-using Ordering.Domain.Common;
-
-namespace Ordering.Domain.Entities
+namespace EventBus.Message.Events
 {
-    public class Order : EntityBase
+    /// <summary>
+    /// event will create from basket microservices
+    /// </summary>
+    public class BasketCheckoutEvent : IntegrationBaseEvent
     {
+        
         public string? UserName { get; set; }
         public decimal TotalPrice { get; set; }
 

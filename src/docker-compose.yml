@@ -13,6 +13,12 @@ services:
   discountdb:
     image: postgres
 
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:latest
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
   pgadmin:
     image: dpage/pgadmin4
 
@@ -39,6 +45,11 @@ services:
     build:
       context: .
       dockerfile: Services/Discount/Dicount.Grpc/Dockerfile
+  ordering.api:
+    image: ${DOCKER_REGISTRY-}orderingapi
+    build:
+      context: .
+      dockerfile: Services/Ordering/Ordering.API/Dockerfile
 
 volumes:
   mongo_data:

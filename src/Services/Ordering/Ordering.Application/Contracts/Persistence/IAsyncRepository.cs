@@ -5,6 +5,7 @@ namespace Ordering.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : EntityBase
     {
+        IQueryable<T> GetAllQuery();
         Task<IReadOnlyList<T>> GetAllAsync();
 		Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate);
 		Task<IReadOnlyList<T>> GetAsync(Expression<Func<T, bool>> predicate = null,
