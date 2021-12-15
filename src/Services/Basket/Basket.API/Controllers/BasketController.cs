@@ -20,16 +20,16 @@ namespace Basket.API.Controllers
         }
 
 
-        [HttpGet("{userName}", Name ="GetBasket")]
+        [HttpGet("{userName}", Name = "GetBasket")]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
-            var basket =await _basketRepository.GetBasket(userName); 
-            return Ok(basket?? new ShoppingCart(userName));
+            var basket = await _basketRepository.GetBasket(userName);
+            return Ok(basket ?? new ShoppingCart(userName));
         }
         [HttpPost]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody]ShoppingCart basket)
+        public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
         {
             // ارتباط 
             // TODO : ارتباط با جی ار پی سی و بعد از آن محسابه قیمت نخایی کالا
@@ -46,6 +46,11 @@ namespace Basket.API.Controllers
         {
             await _basketRepository.DeleteBasket(userName);
             return Ok();
+        }
+
+        public async Task<IActionResult> Checkout([FromBody] BasketCheckout basket)
+        {
+
         }
     }
 }
