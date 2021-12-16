@@ -8,7 +8,7 @@
       "applicationUrl": "http://localhost:5003",
       "dotnetRunMessages": true
     },
-    "Docker (1)": {
+    "Docker": {
       "commandName": "Docker",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "publishAllPorts": true

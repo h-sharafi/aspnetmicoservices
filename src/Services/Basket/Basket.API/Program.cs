@@ -15,6 +15,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetValue<string>("CacheSettings:ConnectionString");
 });
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 // grpc setting 
 builder.Services.AddGrpcClient<DoscountProtoService.DoscountProtoServiceClient>

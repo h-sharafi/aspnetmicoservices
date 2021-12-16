@@ -1,3 +1,6 @@
+using EventBus.Message.Common;
+using MassTransit;
+using Ordering.API.EventBusConsumer;
 using Ordering.API.Extensions;
 using Ordering.Application;
 using Ordering.Infrastructure;
@@ -13,6 +16,23 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
+// rabbitmq settign
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddMassTransit(config =>
+{
+    config.AddConsumer<BaskeCheckoutConsumer>();
+    config.UsingRabbitMq((ctx, cfg) =>
+    {
+        cfg.Host(builder.Configuration["EventBusSettings:HostAddress"]);
+        cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
+        {
+            c.ConfigureConsumer<BaskeCheckoutConsumer>(ctx);
+        });
+    });
+});
+builder.Services.AddScoped<BaskeCheckoutConsumer>();
+
+
 var app = builder.Build();
 app.MigrateDatabase<OrderContext>((context, services) =>
                 {
@@ -36,4 +56,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
- 
