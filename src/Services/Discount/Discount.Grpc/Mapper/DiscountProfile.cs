@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Dicount.Grpc.Protos;
+using Discount.Grpc.Protos;
 using Discount.Grpc.Entities;
 
-namespace Dicount.Grpc.Mapper
+namespace Discount.Grpc.Mapper
 {
     public class DiscountProfile : Profile
     {

@@ -20,17 +20,18 @@ builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddMassTransit(config =>
 {
-    config.AddConsumer<BaskeCheckoutConsumer>();
+    config.AddConsumer<BasketCheckoutConsumer>();
     config.UsingRabbitMq((ctx, cfg) =>
     {
         cfg.Host(builder.Configuration["EventBusSettings:HostAddress"]);
         cfg.ReceiveEndpoint(EventBusConstants.BasketCheckoutQueue, c =>
         {
-            c.ConfigureConsumer<BaskeCheckoutConsumer>(ctx);
+            c.ConfigureConsumer<BasketCheckoutConsumer>(ctx);
         });
     });
 });
-builder.Services.AddScoped<BaskeCheckoutConsumer>();
+builder.Services.AddMassTransitHostedService();
+builder.Services.AddScoped<BasketCheckoutConsumer>();
 
 
 var app = builder.Build();

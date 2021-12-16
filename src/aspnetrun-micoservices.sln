@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{E9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{C749727F-386F-4249-9F6C-B0B4E8514ACE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dicount.Grpc", "Services\Discount\Dicount.Grpc\Dicount.Grpc.csproj", "{911CA294-37A6-45BB-A539-FB5B4A8362B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "Services\Discount\Discount.Grpc\Discount.Grpc.csproj", "{911CA294-37A6-45BB-A539-FB5B4A8362B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{941C3EB5-27B6-495E-880B-4D18E0A910E8}"
 EndProject

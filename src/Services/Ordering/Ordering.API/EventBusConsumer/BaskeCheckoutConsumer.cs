@@ -6,13 +6,13 @@ using MediatR;
 
 namespace Ordering.API.EventBusConsumer
 {
-    public class BaskeCheckoutConsumer : IConsumer<BasketCheckoutEvent>
+    public class BasketCheckoutConsumer : IConsumer<BasketCheckoutEvent>
     {
         private readonly IMapper _mapper;
         private readonly IMediator _mediator;
         private readonly ILogger<BasketCheckoutEvent> _logger;
 
-        public BaskeCheckoutConsumer(IMapper mapper, ILogger<BasketCheckoutEvent> logger = null, IMediator mediator = null)
+        public BasketCheckoutConsumer(IMapper mapper, ILogger<BasketCheckoutEvent> logger = null, IMediator mediator = null)
         {
             _mapper = mapper;
             _logger = logger;

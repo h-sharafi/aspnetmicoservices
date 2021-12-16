@@ -61,9 +61,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/Services/Discount/Dicount.Grpc/bin/Debug/net6.0/Dicount.Grpc.dll",
+            "program": "${workspaceFolder}/src/Services/Discount/Discount.Grpc/bin/Debug/net6.0/Discount.Grpc.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/Services/Discount/Dicount.Grpc",
+            "cwd": "${workspaceFolder}/src/Services/Discount/Discount.Grpc",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

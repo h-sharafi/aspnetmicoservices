@@ -1,5 +1,5 @@
 
-using Dicount.Grpc.Services;
+using Discount.Grpc.Services;
 using Discount.Grpc.Extensions;
 using Discount.Grpc.Repositories;
 using AutoMapper;

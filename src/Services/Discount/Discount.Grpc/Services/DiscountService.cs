@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using Dicount.Grpc.Protos;
+using Discount.Grpc.Protos;
 using Discount.Grpc.Entities;
 using Discount.Grpc.Repositories;
 using Grpc.Core;
 
-namespace Dicount.Grpc.Services
+namespace Discount.Grpc.Services
 {
-    public class DiscountService : DoscountProtoService.DoscountProtoServiceBase
+    public class DiscountService : DiscountProtoService.DiscountProtoServiceBase
     {
         private readonly IDiscountRepository _repository;
         private readonly ILogger<DiscountService> _logger;
