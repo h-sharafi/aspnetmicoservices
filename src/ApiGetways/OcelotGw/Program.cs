@@ -1,15 +1,13 @@
 
-var builder = WebApplication
+WebApplicationBuilder? builder = WebApplication
 .CreateBuilder(args);
-var app = builder.Build();
-
-app.ConfigureLogging((hostingContext, loggingbuilder) =>
+builder.Host.ConfigureLogging((hostingContext, loggingbuilder) =>
 {
     loggingbuilder.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
     loggingbuilder.AddConsole();
     loggingbuilder.AddDebug();
 });
-
+var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
