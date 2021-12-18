@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{94
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGetways", "ApiGetways", "{A6319964-B354-4410-98BC-E544E82140CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGw", "ApiGetways\OcelotGw\OcelotGw.csproj", "{2BA80D23-6589-4041-A9B6-B6E843315DE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA80D23-6589-4041-A9B6-B6E843315DE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA80D23-6589-4041-A9B6-B6E843315DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA80D23-6589-4041-A9B6-B6E843315DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA80D23-6589-4041-A9B6-B6E843315DE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,7 @@ Global
 		{911CA294-37A6-45BB-A539-FB5B4A8362B5} = {E90EC54B-69B1-4345-9C43-F17A57193316}
 		{941C3EB5-27B6-495E-880B-4D18E0A910E8} = {A34CAF52-DC26-4A2E-8FC9-0035C601385C}
 		{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD} = {941C3EB5-27B6-495E-880B-4D18E0A910E8}
+		{2BA80D23-6589-4041-A9B6-B6E843315DE9} = {A6319964-B354-4410-98BC-E544E82140CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {348296C7-21B1-4BDE-A4CB-7D7C76D5C84F}
