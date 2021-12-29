@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{94
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ordering.API", "Services\Ordering\Ordering.API\Ordering.API.csproj", "{3CADFD45-C31C-4C1C-B439-2C62DA69F8CD}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGetways", "ApiGetways", "{A6319964-B354-4410-98BC-E544E82140CF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{A6319964-B354-4410-98BC-E544E82140CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGw", "ApiGetways\OcelotGw\OcelotGw.csproj", "{2BA80D23-6589-4041-A9B6-B6E843315DE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGw", "ApiGateways\OcelotGw\OcelotGw.csproj", "{2BA80D23-6589-4041-A9B6-B6E843315DE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
