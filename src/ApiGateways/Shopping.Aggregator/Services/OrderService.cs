@@ -14,7 +14,7 @@ namespace Shopping.Aggregator.Services
 
         public async Task<IEnumerable<OrderResponseModel>> GetOrdersByUserName(string userName)
         {
-            var httpClientResult = await _client.GetAsync($"/api/v1/basket/{userName}");
+            var httpClientResult = await _client.GetAsync($"/api/v1/Order/{userName}");
             return await httpClientResult.ReadContentAs<List<OrderResponseModel>>();
         }
     }

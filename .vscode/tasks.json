@@ -7,6 +7,19 @@
             "type": "process",
             "args": [
                 "build",
+                // "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
+                "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
                 "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
@@ -19,7 +32,8 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
+                // "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
+                "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +46,8 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
+                // "${workspaceFolder}/src/Services/Ordering/Ordering.API/Ordering.API.csproj",
+                "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/Shopping.Aggregator.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

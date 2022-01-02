@@ -14,6 +14,7 @@ services:
     restart: always
     ports:
       - "6379:6379"
+
   discountdb:
     container_name: discountdb
     environment:
@@ -135,9 +136,9 @@ services:
     container_name: shopping.aggregator
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "ApiSetting.CatalogUrl=http://catalog.api"
-      - "ApiSetting.BasketUrl=http://basket.api"
-      - "ApiSetting.OrderingUrl=http://ordering.api"
+      - "ApiSettings:CatalogUrl=http://catalog.api"
+      - "ApiSettings:BasketUrl=http://basket.api"
+      - "ApiSettings:OrderingUrl=http://ordering.api"
     depends_on:
       - catalog.api
       - basket.api

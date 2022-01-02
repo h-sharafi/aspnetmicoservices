@@ -45,16 +45,31 @@ public class ShoppingController : ControllerBase
             item.Description = product.Description;
             item.ImageFile = product.ImageFile;
         }
-
-        var orders = await _orderService.GetOrdersByUserName(userName);
-
-        var shoppingModel = new ShoppingModel
+        try
         {
-            UserName = userName,
-            BasketWithProducts = basket,
-            Orders = orders
-        };
+            var orders = await _orderService.GetOrdersByUserName(userName);
 
-        return Ok(shoppingModel);
+            var shoppingModel = new ShoppingModel
+            {
+                UserName = userName,
+                BasketWithProducts = basket,
+                Orders = orders
+            };
+
+            return Ok(shoppingModel);
+        }
+
+        catch (System.Exception ex)
+        {
+            var shoppingModel = new ShoppingModel
+            {
+                UserName = userName,
+                BasketWithProducts = basket,
+
+            };
+
+            return Ok(shoppingModel);
+        }
+
     }
 }

@@ -2,13 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (web)",
+            "name": "Shopping.Aggregator",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/ApiGetways/OcelotGW/bin/Debug/net5.0/OcelotGW.dll",
+            "program": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator/bin/Debug/net6.0/Shopping.Aggregator.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/src/ApiGateways/Shopping.Aggregator",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -47,9 +47,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/src/ApiGetways/OcelotGW/bin/Debug/net5.0/OcelotGW.dll",
+            "program": "${workspaceFolder}/src/ApiGateways/OcelotGW/bin/Debug/net5.0/OcelotGW.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/src/ApiGetways/OcelotGW",
+            "cwd": "${workspaceFolder}/src/ApiGateways/OcelotGW",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
